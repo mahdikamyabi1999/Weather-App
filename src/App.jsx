@@ -20,6 +20,9 @@ function App() {
   };
   return (
     <div className="w-full h-full relative">
+      <div className="flex justify-center"><img src='/public/cloudy.png' alt="weather" className="w-32 mb-12" /></div>
+      <h1 className=" text-6xl text-[#F9F871]">WEATHER APP</h1>
+      <p className="text-white text-xl mt-10 mb-5">Enter the City and click Enter</p>
       <div className="text-center p-4">
         <input
           type="text"
@@ -29,6 +32,7 @@ function App() {
           onChange={(e) => setLocation(e.target.value)}
           onKeyDownCapture={searchLoction}
         />
+        
       </div>
       <Weather weatherData={data}/>
     </div>
