@@ -3,7 +3,7 @@
 ###
 
 <div align="center">
-  <img  src="https://github.com/mahdikamyabi1999/Travel-app/blob/main/cover.png"  />
+  <img  src="https://github.com/mahdikamyabi1999/Weather-App/blob/main/public/cover.png"  />
 </div>
 
 ###
