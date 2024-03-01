@@ -2,11 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import axios from "axios";
 import Weather from "./components/Weather";
+import cloud from "/cloudy.png";
 
 function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
-  const API_KEY = '1ac5fc8b0c6716a702e32ccf86a5b5eb';
+  const API_KEY = "1ac5fc8b0c6716a702e32ccf86a5b5eb";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${API_KEY}`;
 
   const searchLoction = (event) => {
@@ -20,9 +21,13 @@ function App() {
   };
   return (
     <div className="w-full h-full relative">
-      <div className="flex justify-center"><img src='/public/cloudy.png' alt="weather" className="w-32 mb-12" /></div>
+      <div className="flex justify-center">
+        <img src={cloud} alt="weather" className="w-32 mb-12" />
+      </div>
       <h1 className=" text-6xl text-[#F9F871]">WEATHER APP</h1>
-      <p className="text-white text-xl mt-10 mb-5">Enter the City and click Enter</p>
+      <p className="text-white text-xl mt-10 mb-5">
+        Enter the City and click Enter
+      </p>
       <div className="text-center p-4">
         <input
           type="text"
@@ -32,9 +37,8 @@ function App() {
           onChange={(e) => setLocation(e.target.value)}
           onKeyDownCapture={searchLoction}
         />
-        
       </div>
-      <Weather weatherData={data}/>
+      <Weather weatherData={data} />
     </div>
   );
 }
