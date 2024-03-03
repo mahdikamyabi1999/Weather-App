@@ -2,7 +2,7 @@ function Weather({ weatherData }) {
   return (
     <div>
       {weatherData.weather ? (
-        <div className="w-[500px] h-[250px] bg-[#EDE5F2] shadow-lg rounded-xl m-auto relative px-6 top-[10%] mt-5">
+        <div className="md:w-[500px] md:h-[250px] bg-[#EDE5F2] shadow-lg rounded-xl m-auto relative px-6 top-[10%] mt-5">
           <div className="flex justify-between w-full">
             <div className="w-1/2 my-4 mx-auto flex justify-between items-center">
               <div className="flex flex-col items-start justify-between h-full">
@@ -15,7 +15,7 @@ function Weather({ weatherData }) {
                   </p>
                 </div>
                 <div>
-                  <h1 className="text-6xl font-semibold">
+                  <h1 className=" text-5xl md:text-6xl font-semibold">
                     {weatherData.main.temp.toFixed()} °C
                   </h1>
                 </div>
